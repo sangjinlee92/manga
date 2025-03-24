@@ -1,27 +1,33 @@
-/* Fondo oscuro y sin márgenes */
-body {
-    background-color: #111;
+/* Eliminar márgenes y asegurar que la página ocupe toda la pantalla */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo oscuro */
+body {
+    background-color: #111;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
 }
 
-/* Contenedor del Webtoon */
+/* Contenedor de las imágenes */
 .webtoon {
-    width: 100%;
-    max-width: 1000px; /* Ajustá el ancho máximo si querés */
+    width: 100vw;  /* Ocupa todo el ancho de la pantalla */
+    max-width: 1000px;  /* Opcional: limitar el ancho en pantallas grandes */
 }
 
-/* Ajuste de imágenes */
+/* Imágenes del webtoon */
 .webtoon img {
-    width: 100%;
+    width: 100%;  /* Ocupa el 100% del contenedor */
     height: auto;
     display: block;
 }
 
-/* Estilo del enlace para volver */
+/* Enlace para volver */
 .back-link {
     color: white;
     text-decoration: none;
