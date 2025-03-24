@@ -1,42 +1,32 @@
-/* Reset de márgenes y ajuste global */
+/* Reset de márgenes y padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Configuración del cuerpo de la página */
+/* Cuerpo de la página */
 body {
     background-color: #111;
     display: flex;
-    justify-content: center;  /* Centra el contenido horizontalmente */
-    align-items: flex-start;  /* Asegura que el contenido empiece desde arriba */
+    justify-content: center; /* Centra horizontalmente */
     width: 100vw;
-    min-height: 100vh;
 }
 
 /* Contenedor del webtoon */
 .webtoon {
-    width: 100%;
-    max-width: 800px; /* Ajusta el tamaño máximo del webtoon */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra las imágenes dentro del contenedor */
+    align-items: center; /* Asegura que las imágenes estén centradas */
+    width: 100%;
+    max-width: 800px; /* Ajusta el tamaño máximo del webtoon */
 }
 
 /* Estilo de las imágenes */
 .webtoon img {
-    width: 100%;  /* Ocupará el 100% del ancho del contenedor */
-    height: auto;  /* Mantendrá la proporción */
+    width: 100%;  /* Ocupará el 100% del contenedor */
+    height: auto;  /* Mantiene la proporción */
     display: block;
+    margin: 0 auto;  /* Asegura que estén bien centradas */
 }
 
-/* Enlace para volver */
-.back-link {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 20px auto;
-    display: block;
-    text-align: center;
-}
