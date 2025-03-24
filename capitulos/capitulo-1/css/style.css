@@ -1,16 +1,16 @@
-/* Reset para eliminar márgenes y asegurar que todo ocupe bien el espacio */
+/* Reset de márgenes y ajuste global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fondo oscuro */
+/* Configuración del cuerpo de la página */
 body {
     background-color: #111;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    align-items: flex-start;  /* Asegura que el contenido empiece desde arriba */
     width: 100vw;
     min-height: 100vh;
 }
@@ -21,7 +21,7 @@ body {
     max-width: 800px; /* Ajusta el tamaño máximo del webtoon */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centra las imágenes dentro del contenedor */
 }
 
 /* Estilo de las imágenes */
@@ -36,6 +36,7 @@ body {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    margin: 20px;
+    margin: 20px auto;
     display: block;
+    text-align: center;
 }
