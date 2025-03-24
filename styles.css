@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #121212;
     color: white;
     text-align: center;
@@ -8,48 +8,79 @@ body {
     padding: 0;
 }
 
-/* Contenedor principal */
-.container {
+/* Encabezado con imagen */
+header {
+    position: relative;
+    text-align: center;
+}
+
+.banner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: -40px;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Contenedor de capítulos */
+.chapter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
 }
 
-/* Título */
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #ffcc00;
-}
-
-/* Lista de capítulos */
-.chapter-list {
-    list-style: none;
-    padding: 0;
-}
-
-.chapter-list li {
-    margin: 10px 0;
-}
-
-/* Botones de capítulos */
-.chapter-list a {
-    display: block;
+/* Tarjetas de capítulos */
+.chapter-card {
     width: 200px;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: #ffcc00;
-    color: #121212;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1e1e1e;
     text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.chapter-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.chapter-info {
+    padding: 10px;
     font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hover efecto */
+.chapter-card:hover {
+    transform: scale(1.1);
+}
+
+/* Botón "Volver arriba" */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
     transition: 0.3s;
 }
 
-.chapter-list a:hover {
+#scrollTopBtn:hover {
     background-color: #ffaa00;
 }
