@@ -1,4 +1,4 @@
-/* Eliminar márgenes y asegurar que la página ocupe toda la pantalla */
+/* Reset para eliminar márgenes y asegurar que todo ocupe bien el espacio */
 * {
     margin: 0;
     padding: 0;
@@ -12,18 +12,22 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    min-height: 100vh;
 }
 
-/* Contenedor de las imágenes */
+/* Contenedor del webtoon */
 .webtoon {
-    width: 100vw;  /* Ocupa todo el ancho de la pantalla */
-    max-width: 1000px;  /* Opcional: limitar el ancho en pantallas grandes */
+    width: 100%;
+    max-width: 800px; /* Ajusta el tamaño máximo del webtoon */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Imágenes del webtoon */
+/* Estilo de las imágenes */
 .webtoon img {
-    width: 100%;  /* Ocupa el 100% del contenedor */
-    height: auto;
+    width: 100%;  /* Ocupará el 100% del ancho del contenedor */
+    height: auto;  /* Mantendrá la proporción */
     display: block;
 }
 
