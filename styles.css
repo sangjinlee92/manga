@@ -53,3 +53,22 @@ h2 {
 .chapter-list a:hover {
     background-color: #ffaa00;
 }
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background-color: #ffaa00;
+}
