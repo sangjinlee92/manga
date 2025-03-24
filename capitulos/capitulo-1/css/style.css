@@ -1,5 +1,4 @@
-
-/* Fondo oscuro y eliminación de márgenes */
+/* Fondo oscuro y sin márgenes */
 body {
     background-color: #111;
     margin: 0;
@@ -9,10 +8,16 @@ body {
     align-items: center;
 }
 
-/* Estilo de las imágenes del Webtoon */
+/* Contenedor del Webtoon */
+.webtoon {
+    width: 100%;
+    max-width: 1000px; /* Ajustá el ancho máximo si querés */
+}
+
+/* Ajuste de imágenes */
 .webtoon img {
     width: 100%;
-    max-width: 600px; /* Ajustá el tamaño si querés más grande o más chico */
+    height: auto;
     display: block;
 }
 
