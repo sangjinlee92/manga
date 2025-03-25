@@ -17,7 +17,7 @@ body {
 
 /* Estilo para el título de la página */
 h1 {
-    font-family: 'Bebas Neue', 'Impact', sans-serif; /* Fuentes alternativas en caso de que Bebas Neue no cargue */
+    font-family: 'Impact', sans-serif; /* Fuentes alternativas en caso de que Bebas Neue no cargue */
     font-size: 4rem; /* Aumenta el tamaño para que sea más visible */
     color: #ffcc00; /* Color dorado para el título */
     margin-bottom: 20px;
