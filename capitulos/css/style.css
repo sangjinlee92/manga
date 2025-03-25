@@ -13,16 +13,20 @@ body {
     width: 100vw;
     font-family: 'Arial', sans-serif; /* Fuente predeterminada para el cuerpo */
     scroll-behavior: smooth; /* Desplazamiento suave por defecto */
+    flex-direction: column; /* Apila elementos en columna */
+    align-items: center; /* Centra todos los elementos */
 }
 
 /* Estilo para el título de la página */
 h1 {
-    font-family: 'Impact', sans-serif; /* Fuentes alternativas en caso de que Bebas Neue no cargue */
+    font-family: 'Bebas Neue', 'Impact', sans-serif; /* Fuentes alternativas en caso de que Bebas Neue no cargue */
     font-size: 4rem; /* Aumenta el tamaño para que sea más visible */
     color: #ffcc00; /* Color dorado para el título */
+    margin-top: 30px; /* Espaciado superior para separar el título de la imagen */
     margin-bottom: 20px;
     text-shadow: 4px 4px 10px black; /* Sombra más pronunciada para darle más impacto */
     letter-spacing: 2px; /* Espaciado entre letras para mayor legibilidad */
+    text-align: center; /* Asegura que el título esté centrado */
 }
 
 /* Contenedor del webtoon */
@@ -85,4 +89,3 @@ h1 {
 .back-link:hover {
     color: #ffaa00;
 }
-
