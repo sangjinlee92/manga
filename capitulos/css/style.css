@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     width: 100vw;
+    scroll-behavior: smooth; /* Desplazamiento suave por defecto para todo el cuerpo */
 }
 
 /* Contenedor del webtoon */
@@ -30,31 +31,9 @@ body {
     margin: 0 auto;  /* Asegura que estén bien centradas */
 }
 
-/* Fuente del título desde Google Fonts */
-h1 {
-    font-family: 'Bebas Neue', sans-serif; /* Fuente que elegimos */
-    font-size: 3rem;
-    margin-top: 20px;
-    text-shadow: 2px 2px 5px black;
-    letter-spacing: 2px; /* Añadir espaciado entre letras para un estilo más llamativo */
-    text-transform: uppercase; /* Para que el texto esté en mayúsculas */
-    color: white;
-}
-
-/* Estilo de los enlaces */
-a {
-    text-decoration: none;
-    color: #ffcc00;
-    font-size: 1.2rem;
-}
-
-a:hover {
-    color: #ffaa00;
-}
-
-/* Botón "Volver arriba" */
+/* Botón de volver arriba */
 #scrollTopBtn {
-    display: none;
+    display: none; /* Por defecto está oculto */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -65,9 +44,18 @@ a:hover {
     font-size: 20px;
     cursor: pointer;
     border-radius: 50%;
-    transition: 0.3s;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animación suave */
+    opacity: 0; /* Inicialmente no visible */
 }
 
+/* Animación para que aparezca con transición suave */
+#scrollTopBtn.show {
+    display: block;
+    opacity: 1; /* Aparece gradualmente */
+    transform: translateY(0); /* Se mueve desde abajo */
+}
+
+/* Hover sobre el botón */
 #scrollTopBtn:hover {
     background-color: #ffaa00;
 }
