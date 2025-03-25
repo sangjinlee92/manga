@@ -17,11 +17,12 @@ body {
 
 /* Estilo para el título de la página */
 h1 {
-    font-family: 'Bebas Neue', sans-serif; /* Fuente similar a la de Solo Leveling */
-    font-size: 3rem;
+    font-family: 'Bebas Neue', 'Impact', sans-serif; /* Fuentes alternativas en caso de que Bebas Neue no cargue */
+    font-size: 4rem; /* Aumenta el tamaño para que sea más visible */
     color: #ffcc00; /* Color dorado para el título */
     margin-bottom: 20px;
-    text-shadow: 2px 2px 5px black; /* Sombra sutil para darle más impacto */
+    text-shadow: 4px 4px 10px black; /* Sombra más pronunciada para darle más impacto */
+    letter-spacing: 2px; /* Espaciado entre letras para mayor legibilidad */
 }
 
 /* Contenedor del webtoon */
