@@ -11,17 +11,6 @@ body {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     width: 100vw;
-    font-family: 'Arial', sans-serif; /* Fuente predeterminada para el cuerpo */
-    scroll-behavior: smooth; /* Desplazamiento suave por defecto */
-}
-
-/* Estilo para el título de la página */
-h1 {
-    font-family: 'Bebas Neue', sans-serif; /* Fuente similar a la de Solo Leveling */
-    font-size: 3rem;
-    color: #ffcc00; /* Color dorado para el título */
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px black; /* Sombra sutil para darle más impacto */
 }
 
 /* Contenedor del webtoon */
@@ -31,7 +20,6 @@ h1 {
     align-items: center; /* Asegura que las imágenes estén centradas */
     width: 100%;
     max-width: 800px; /* Ajusta el tamaño máximo del webtoon */
-    margin-bottom: 60px; /* Espacio al final */
 }
 
 /* Estilo de las imágenes */
@@ -42,9 +30,31 @@ h1 {
     margin: 0 auto;  /* Asegura que estén bien centradas */
 }
 
-/* Botón de volver arriba */
+/* Fuente del título desde Google Fonts */
+h1 {
+    font-family: 'Bebas Neue', sans-serif; /* Fuente que elegimos */
+    font-size: 3rem;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px black;
+    letter-spacing: 2px; /* Añadir espaciado entre letras para un estilo más llamativo */
+    text-transform: uppercase; /* Para que el texto esté en mayúsculas */
+    color: white;
+}
+
+/* Estilo de los enlaces */
+a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    color: #ffaa00;
+}
+
+/* Botón "Volver arriba" */
 #scrollTopBtn {
-    display: none; /* Por defecto está oculto */
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -55,32 +65,10 @@ h1 {
     font-size: 20px;
     cursor: pointer;
     border-radius: 50%;
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Animación suave */
-    opacity: 0; /* Inicialmente no visible */
+    transition: 0.3s;
 }
 
-/* Animación para que aparezca con transición suave */
-#scrollTopBtn.show {
-    display: block;
-    opacity: 1; /* Aparece gradualmente */
-    transform: translateY(0); /* Se mueve desde abajo */
-}
-
-/* Hover sobre el botón */
 #scrollTopBtn:hover {
     background-color: #ffaa00;
 }
 
-/* Enlace "Volver al inicio" */
-.back-link {
-    text-decoration: none;
-    color: #ffcc00;
-    font-size: 1.2rem;
-    display: inline-block;
-    margin-top: 20px;
-    transition: color 0.3s ease;
-}
-
-.back-link:hover {
-    color: #ffaa00;
-}
