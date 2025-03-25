@@ -1,0 +1,111 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo de la página */
+body {
+    background-color: #111;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: white;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    width: 100vw;
+}
+
+/* Estilo del encabezado */
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Contenedor del webtoon */
+.webtoon {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Asegura que las imágenes estén centradas */
+    width: 100%;
+    max-width: 800px; /* Ajusta el tamaño máximo del webtoon */
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra suave */
+}
+
+/* Estilo de las imágenes */
+.webtoon img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px; /* Separación entre las imágenes */
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Animación de aparición */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo para el botón "Volver arriba" */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background-color: #ffaa00;
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+}
+
+/* Enlace "Volver al inicio" */
+a.back-link {
+    display: block;
+    margin-top: 20px;
+    color: #ffcc00;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+a.back-link:hover {
+    color: #ffaa00;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 600px) {
+    .webtoon {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    #scrollTopBtn {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
