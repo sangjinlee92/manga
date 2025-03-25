@@ -11,7 +11,17 @@ body {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     width: 100vw;
-    scroll-behavior: smooth; /* Desplazamiento suave por defecto para todo el cuerpo */
+    font-family: 'Arial', sans-serif; /* Fuente predeterminada para el cuerpo */
+    scroll-behavior: smooth; /* Desplazamiento suave por defecto */
+}
+
+/* Estilo para el título de la página */
+h1 {
+    font-family: 'Bebas Neue', sans-serif; /* Fuente similar a la de Solo Leveling */
+    font-size: 3rem;
+    color: #ffcc00; /* Color dorado para el título */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px black; /* Sombra sutil para darle más impacto */
 }
 
 /* Contenedor del webtoon */
@@ -21,6 +31,7 @@ body {
     align-items: center; /* Asegura que las imágenes estén centradas */
     width: 100%;
     max-width: 800px; /* Ajusta el tamaño máximo del webtoon */
+    margin-bottom: 60px; /* Espacio al final */
 }
 
 /* Estilo de las imágenes */
@@ -58,4 +69,18 @@ body {
 /* Hover sobre el botón */
 #scrollTopBtn:hover {
     background-color: #ffaa00;
+}
+
+/* Enlace "Volver al inicio" */
+.back-link {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #ffaa00;
 }
