@@ -1,42 +1,41 @@
-/* Reset de márgenes y padding */
-* {
-    margin: 0; /* Elimina el margen por defecto de todos los elementos */
-    padding: 0; /* Elimina el padding por defecto de todos los elementos */
-    box-sizing: border-box; /* Incluye el padding y el borde dentro del tamaño total de los elementos */
+body { 
+    font-family: Arial, sans-serif; /* Establece la fuente global de la página */
+    text-align: center; /* Centra el texto en el cuerpo de la página */
+    padding: 20px; /* Aplica un poco de espacio alrededor del contenido de la página */
+    background-color: #f2f2f2; /* Establece el color de fondo de la página */
 }
 
-/* Cuerpo de la página */
-body {
-    background-color: #111; /* Establece un color de fondo oscuro para la página */
-    display: flex; /* Usa Flexbox para organizar los elementos dentro del body */
-    justify-content: center; /* Centra el contenido horizontalmente en la página */
-    width: 100vw; /* Hace que el body ocupe el 100% del ancho de la ventana del navegador */
-    font-family: 'Arial', sans-serif; /* Establece la fuente predeterminada de la página */
-    scroll-behavior: smooth; /* Hace que el desplazamiento por la página sea suave */
-    flex-direction: column; /* Organiza los elementos en una columna (de arriba a abajo) */
-    align-items: center; /* Centra el contenido verticalmente */
-    height: 100vh; /* Hace que el body ocupe toda la altura de la ventana del navegador */
+.main-container { 
+    background-color: #fff; /* Color de fondo del contenedor principal (blanco) */
+    padding: 30px; /* Espacio interno en el contenedor principal */
+    border-radius: 10px; /* Bordes redondeados en el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra sutil alrededor del contenedor */
+    max-width: 600px; /* Establece el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
 }
 
-/* Estilo para el título de la página */
-h1 {
-    font-family: 'Bebas Neue', 'Impact', sans-serif; /* Establece la fuente para el título (una fuente más impactante) */
-    font-size: 4rem; /* Establece un tamaño de fuente grande para que el título sea visible */
-    color: #ffcc00; /* Establece el color dorado para el título */
-    text-shadow: 4px 4px 10px black; /* Añade una sombra negra al texto para darle un efecto de resplandor */
-    letter-spacing: 2px; /* Aumenta el espaciado entre las letras del título */
-    text-align: center; /* Asegura que el texto esté centrado en la pantalla */
-    margin-top: 30px; /* Añade un espacio por encima del título */
+h1 { 
+    font-size: 3rem; /* Establece el tamaño del título (grande) */
+    color: #333; /* Establece el color del texto del título (gris oscuro) */
+    margin-bottom: 20px; /* Aplica un margen debajo del título */
 }
 
-/* Estilo para el enlace dentro del título */
-h1 a {
-    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
-    color: #ffcc00; /* Aplica el mismo color dorado que el título */
-    transition: color 0.3s ease; /* Agrega una transición suave cuando el color cambia */
+p { 
+    font-size: 1.2rem; /* Establece el tamaño de fuente del párrafo */
+    color: #555; /* Establece el color del texto del párrafo (gris medio) */
+    margin-bottom: 30px; /* Aplica un margen debajo del párrafo */
 }
 
-/* Efecto hover para el enlace */
-h1 a:hover {
-    color: #ffaa00; /* Cambia el color del enlace a un tono más brillante de amarillo cuando el usuario pasa el mouse */
+.button { 
+    display: inline-block; /* Hace que el enlace se comporte como un bloque en línea */
+    padding: 10px 20px; /* Aplica espacio interno en el botón */
+    font-size: 1.2rem; /* Establece el tamaño del texto en el botón */
+    background-color: #008CBA; /* Establece el color de fondo del botón */
+    color: white; /* Establece el color del texto del botón (blanco) */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Redondea los bordes del botón */
+}
+
+.button:hover { 
+    background-color: #005f75; /* Cambia el color del fondo cuando el mouse pasa sobre el botón */
 }
