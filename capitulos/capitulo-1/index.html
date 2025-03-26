@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"> <!-- Define la codificación de caracteres para la página, en este caso UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que la página se adapte a diferentes tamaños de pantalla (para dispositivos móviles) -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> <!-- Enlaza la fuente 'Bebas Neue' de Google Fonts -->
-
-    <title>Capítulo 1 - Solo Leveling</title> <!-- Título de la página (lo que aparece en la pestaña del navegador) -->
-    <link rel="stylesheet" href="../css/style.css"> <!-- Enlaza el archivo de estilo CSS (para el diseño de la página) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Capítulo 1 - Solo Leveling</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div class="chapter-header"> <!-- Contenedor para el encabezado del capítulo -->
-        <h1>Capítulo 1</h1> <!-- Título del capítulo que se está visualizando -->
+    <div class="chapter-header">
+        <h1>Capítulo 1 - El Comienzo</h1>
     </div>
 
-    <div class="webtoon"> <!-- Contenedor donde se muestran las imágenes del webtoon -->
-        <!-- Aquí se agregan todas las imágenes del capítulo en formato .webp (ajusta las rutas de acuerdo a tus archivos) -->
+    <div class="webtoon">
         <img src="imagenes/10001.webp" alt="Página 1">
         <img src="imagenes/10002.webp" alt="Página 2">
         <img src="imagenes/10003.webp" alt="Página 3">
@@ -32,24 +30,19 @@
         <img src="imagenes/10015.webp" alt="Página 15">
         <img src="imagenes/10016.webp" alt="Página 16">
         <img src="imagenes/10017.webp" alt="Página 17">
-    </div>    
+    </div>
 
-    <!-- Contenedor para los botones de navegación -->
     <div class="navigation-buttons">
-        <!-- Botón de "Capítulo Anterior" que lleva a la página del capítulo anterior -->
-        <a href="capitulo-1.html" id="previous-chapter" class="button">⬅ Capítulo Anterior</a> 
-        <!-- Botón que lleva a la página de la lista de capítulos -->
-        <a href="capitulos.html" class="button">📜 Lista de Capítulos</a> 
-        <!-- Botón de "Capítulo Siguiente" que lleva a la página del siguiente capítulo -->
+        <!-- Enlace al capítulo anterior (modificar según el capítulo actual) -->
+        <a href="capitulo-1.html" id="previous-chapter" class="button">⬅ Capítulo Anterior</a>
+        <!-- Enlace a la lista de capítulos -->
+        <a href="capitulos.html" class="button">Lista de Capítulos</a>
+        <!-- Enlace al siguiente capítulo (modificar según el capítulo actual) -->
         <a href="capitulo-2.html" id="next-chapter" class="button">Capítulo Siguiente ➡</a>
     </div>
 
-    <!-- Botón de "Volver al inicio" para regresar a la página principal -->
     <a href="../index.html" class="back-link">⬅ Volver al inicio</a>
-    <!-- Botón para subir a la parte superior de la página (scroll top) -->
     <button id="scrollTopBtn">↑</button>
-    
-    <!-- Enlace al archivo JavaScript que puede manejar interacciones dinámicas -->
     <script src="script.js"></script>
 </body>
 </html>
