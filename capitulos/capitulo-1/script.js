@@ -37,6 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Actualizar los enlaces de "Capítulo Anterior" y "Capítulo Siguiente"
-   // document.getElementById('previous-chapter').href = `capitulo-${currentChapter - 1}.html`;
-   // document.getElementById('next-chapter').href = `capitulo-${currentChapter + 1}.html`;
+        document.getElementById('previous-chapter').href = `capitulo-${currentChapter - 1}.html`;
+        document.getElementById('next-chapter').href = `capitulo-${currentChapter + 1}.html`;
 });
