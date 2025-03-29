@@ -20,31 +20,27 @@ scrollTopBtn.onclick = function () {
     });
 };
     
-document.addEventListener('DOMContentLoaded', function() {
-    // Obtener el número del capítulo actual desde la URL
-    const currentChapter = parseInt(window.location.pathname.split('-')[1]);
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtener el número del capítulo actual
+    const currentChapter = parseInt(window.location.pathname.split('/').pop().replace('capitulo-', '').replace('.html', '')); // Esto obtiene el número del capítulo a partir de la URL actual
 
-    // Total de capítulos disponibles
-    const totalChapters = 179; // Cambia este número según la cantidad total de capítulos
-
-    // Enlaces de los botones
     const previousChapterButton = document.getElementById('previous-chapter');
     const nextChapterButton = document.getElementById('next-chapter');
-
-    // Verificar si estamos en el primer capítulo
+    
+    // Lógica para Capítulo Anterior
     if (currentChapter > 1) {
-        previousChapterButton.href = `capitulo-${currentChapter - 1}`;
-        previousChapterButton.style.display = 'inline'; // Mostrar el botón de "Capítulo Anterior"
+        previousChapterButton.href = `capitulo-${currentChapter - 1}/index.html`; // Enlace al capítulo anterior
+        previousChapterButton.style.display = 'inline'; // Mostrar botón "Anterior"
     } else {
-        previousChapterButton.style.display = 'none'; // Ocultar el botón de "Capítulo Anterior" en el primer capítulo
+        previousChapterButton.style.display = 'none'; // Ocultar botón "Anterior" si estamos en el primer capítulo
     }
 
-    // Verificar si estamos en el último capítulo
-    if (currentChapter < totalChapters) {
-        nextChapterButton.href = `capitulo-${currentChapter + 1}/index.html`;
-        nextChapterButton.style.display = 'inline'; // Mostrar el botón de "Capítulo Siguiente"
+    // Lógica para Capítulo Siguiente
+    if (currentChapter < 179) {  // Asumiendo que tienes 179 capítulos
+        nextChapterButton.href = `capitulo-${currentChapter + 1}/index.html`; // Enlace al siguiente capítulo
+        nextChapterButton.style.display = 'inline'; // Mostrar botón "Siguiente"
     } else {
-        nextChapterButton.style.display = 'none'; // Ocultar el botón de "Capítulo Siguiente" en el último capítulo
+        nextChapterButton.style.display = 'none'; // Ocultar botón "Siguiente" si estamos en el último capítulo
     }
 });
 
