@@ -32,14 +32,14 @@
         <img src="imagenes/10017.webp" alt="Página 17">
     </div>
 
-    <div class="navigation-buttons">
-        <!-- Enlace al capítulo anterior -->
-        <a href="" id="previous-chapter" class="button">⬅ Capítulo Anterior</a>
-        <!-- Enlace a la lista de capítulos -->
-        <a href="../capitulos.html" class="button">Lista de Capítulos</a>
-        <!-- Enlace al siguiente capítulo -->
-        <a href="" id="next-chapter" class="button">Capítulo Siguiente ➡</a>
-    </div>
+<div class="navigation-buttons">
+    <!-- Enlace al capítulo anterior -->
+    <a href="../capitulos/capitulo-{{currentChapter-1}}" id="previous-chapter" class="button">⬅ Capítulo Anterior</a>
+    <!-- Enlace a la lista de capítulos -->
+    <a href="../capitulos.html" class="button">Lista de Capítulos</a>
+    <!-- Enlace al siguiente capítulo -->
+    <a href="../capitulos/capitulo-{{currentChapter+1}}" id="next-chapter" class="button">Capítulo Siguiente ➡</a>
+</div>
 
     <a href="../index.html" class="back-link">⬅ Volver al inicio</a>
     <button id="scrollTopBtn">↑</button>
