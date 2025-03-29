@@ -20,14 +20,18 @@
         });
     };
 
-    // Funcionalidad para los botones de navegación entre capítulos
 document.addEventListener('DOMContentLoaded', function () {
     // Obtener la parte de la URL que indica el capítulo
     const pathParts = window.location.pathname.split('/');
     const chapterPart = pathParts.find(part => part.startsWith('capitulo-'));
 
     // Extraer el número del capítulo
-    const currentChapter = chapterPart ? parseInt(chapterPart.replace('capitulo-', '')) : 1;
+    let currentChapter = chapterPart ? parseInt(chapterPart.replace('capitulo-', '')) : NaN;
+
+    // Si no se pudo obtener el número, asumir que estamos en el capítulo 1
+    if (isNaN(currentChapter)) {
+        currentChapter = 1;
+    }
 
     const previousChapterButton = document.getElementById('previous-chapter');
     const nextChapterButton = document.getElementById('next-chapter');
@@ -48,3 +52,4 @@ document.addEventListener('DOMContentLoaded', function () {
         nextChapterButton.style.display = 'none'; // Ocultar botón "Siguiente" si estamos en el último capítulo
     }
 });
+
