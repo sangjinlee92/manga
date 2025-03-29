@@ -19,24 +19,30 @@ scrollTopBtn.onclick = function () {
         behavior: "smooth"  // Desplazamiento suave
     });
 };
+    
+        // Función para actualizar los enlaces de navegación
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentChapter = 1; // Cambia este valor al número de capítulo actual
+            const totalChapters = 179; // Total de capítulos disponibles
+            
+            // Establecer enlace para el capítulo anterior
+            const prevChapter = currentChapter > 1 ? `capitulo-${currentChapter - 1}` : '';
+            document.getElementById('previous-chapter').href = prevChapter;
 
-// Funcionalidad para los botones de navegación entre capítulos
-document.addEventListener('DOMContentLoaded', function() {
-    // Suponiendo que tienes un mecanismo para identificar el capítulo actual.
-    let currentChapter = 1; // Cambia este valor según el capítulo que estés visualizando (1 para el primer capítulo)
-    let totalChapters = 179; // Total de capítulos (cambiar según la cantidad total)
+            // Establecer enlace para el siguiente capítulo
+            const nextChapter = currentChapter < totalChapters ? `capitulo-${currentChapter + 1}` : '';
+            document.getElementById('next-chapter').href = nextChapter;
 
-    // Ocultar el botón de "Capítulo Anterior" si estamos en el Capítulo 1
-    if (currentChapter === 1) {
-        document.getElementById('previous-chapter').style.display = 'none';
-    }
+            // Ocultar el botón de "Capítulo Anterior" si estamos en el primer capítulo
+            if (currentChapter === 1) {
+                document.getElementById('previous-chapter').style.display = 'none';
+            }
 
-    // Ocultar el botón de "Capítulo Siguiente" si estamos en el último capítulo
-    if (currentChapter === totalChapters) {
-        document.getElementById('next-chapter').style.display = 'none';
-    }
+            // Ocultar el botón de "Capítulo Siguiente" si estamos en el último capítulo
+            if (currentChapter === totalChapters) {
+                document.getElementById('next-chapter').style.display = 'none';
+            }
+        });
 
-    // Actualizar los enlaces de "Capítulo Anterior" y "Capítulo Siguiente"
-        document.getElementById('previous-chapter').href = `${currentChapter - 1}.html`;
-        document.getElementById('next-chapter').href = `${currentChapter + 1}.html`;
-});
+
+
