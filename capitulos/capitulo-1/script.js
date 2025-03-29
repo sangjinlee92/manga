@@ -31,9 +31,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const previousChapterButton = document.getElementById('previous-chapter');
     const nextChapterButton = document.getElementById('next-chapter');
 
+    // Comprobar si el capítulo actual es válido (mayor que 0)
+    if (!currentChapter || isNaN(currentChapter) || currentChapter <= 0) {
+        console.error("Número de capítulo no válido.");
+        return; // Salir si el capítulo actual no es válido
+    }
+
     // Definir el enlace del capítulo anterior
     if (currentChapter > 1) {
         previousChapterButton.href = `capitulo-${parseInt(currentChapter) - 1}`;
+        previousChapterButton.style.display = 'inline'; // Asegurarse de que esté visible
     } else {
         previousChapterButton.style.display = 'none'; // Si estamos en el capítulo 1, ocultar "Capítulo Anterior"
     }
@@ -41,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Definir el enlace del siguiente capítulo
     if (currentChapter < totalChapters) {
         nextChapterButton.href = `capitulo-${parseInt(currentChapter) + 1}`;
+        nextChapterButton.style.display = 'inline'; // Asegurarse de que esté visible
     } else {
         nextChapterButton.style.display = 'none'; // Si estamos en el último capítulo, ocultar "Capítulo Siguiente"
     }
