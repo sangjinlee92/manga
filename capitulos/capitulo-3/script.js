@@ -21,22 +21,35 @@
     };
 
     // Funcionalidad para los botones de navegación entre capítulos
-    document.addEventListener('DOMContentLoaded', function() {
-        // Suponiendo que tienes un mecanismo para identificar el capítulo actual.
-        let currentChapter = 3; // Cambia este valor según el capítulo que estés visualizando
-        let totalChapters = 179; // Total de capítulos
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtener la URL actual y dividirla en partes
+    const pathParts = window.location.pathname.split('/');
+    
+    // Buscar la parte que contiene 'capitulo-'
+    let chapterPart = pathParts.find(part => part.startsWith('capitulo-'));
+    
+    // Extraer el número del capítulo
+    let currentChapter = chapterPart ? parseInt(chapterPart.replace('capitulo-', '')) : 1;
 
-        // Ocultar el botón de "Capítulo Anterior" si estamos en el Capítulo 1
-        if (currentChapter === 1) {
-            document.getElementById('previous-chapter').style.display = 'none';
-        }
+    const previousChapterButton = document.getElementById('previous-chapter');
+    const nextChapterButton = document.getElementById('next-chapter');
 
-        // Ocultar el botón de "Capítulo Siguiente" si estamos en el último capítulo
-        if (currentChapter === totalChapters) {
-            document.getElementById('next-chapter').style.display = 'none';
-        }
+    // Definir la URL base (ajústala según la estructura de tu sitio)
+    const baseURL = "/manga/capitulos/";
 
-        // Actualizar los enlaces de "Capítulo Anterior" y "Capítulo Siguiente"
-        document.getElementById('previous-chapter').href = capitulo-2.html;
-        document.getElementById('next-chapter').href = capitulo-4.html;
-    });
+    // Lógica para Capítulo Anterior
+    if (currentChapter > 1) {
+        previousChapterButton.href = `${baseURL}capitulo-${currentChapter - 1}/`; // Enlace al capítulo anterior
+        previousChapterButton.style.display = 'inline'; // Mostrar botón "Anterior"
+    } else {
+        previousChapterButton.style.display = 'none'; // Ocultar botón "Anterior" en el primer capítulo
+    }
+
+    // Lógica para Capítulo Siguiente
+    if (currentChapter < 179) {  // Ajusta el número total de capítulos si es necesario
+        nextChapterButton.href = `${baseURL}capitulo-${currentChapter + 1}/`; // Enlace al siguiente capítulo
+        nextChapterButton.style.display = 'inline'; // Mostrar botón "Siguiente"
+    } else {
+        nextChapterButton.style.display = 'none'; // Ocultar botón "Siguiente" en el último capítulo
+    }
+});
