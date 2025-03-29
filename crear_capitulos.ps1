@@ -69,7 +69,7 @@ for ($i = 2; $i -le 179; $i++) {
 </html>
 "@
     # Crear el archivo HTML en la carpeta del capítulo
-    $htmlFilePath = "$chapterFolder\capitulo-$i.html"
+    $htmlFilePath = "$chapterFolder\index.html"
     Set-Content -Path $htmlFilePath -Value $htmlContent
 
     # Crear el archivo script.js dentro de la misma carpeta
