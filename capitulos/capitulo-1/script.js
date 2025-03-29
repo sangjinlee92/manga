@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Verificar si estamos en el último capítulo
     if (currentChapter < totalChapters) {
-        nextChapterButton.href = `capitulo-${currentChapter + 1}`;
+        nextChapterButton.href = `capitulo-${currentChapter + 1}/index.html`;
         nextChapterButton.style.display = 'inline'; // Mostrar el botón de "Capítulo Siguiente"
     } else {
         nextChapterButton.style.display = 'none'; // Ocultar el botón de "Capítulo Siguiente" en el último capítulo
