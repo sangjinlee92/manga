@@ -22,7 +22,7 @@ scrollTopBtn.onclick = function () {
     
         // Función para actualizar los enlaces de navegación
 document.addEventListener('DOMContentLoaded', function () {
-    const currentChapter = 2; // Cambia este valor al número del capítulo actual
+    const currentChapter = 1; // Cambia este valor al número del capítulo actual
     const totalChapters = 179; // Total de capítulos disponibles
     
     // Establecer enlace para el capítulo anterior
