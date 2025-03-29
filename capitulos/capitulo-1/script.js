@@ -22,16 +22,18 @@ scrollTopBtn.onclick = function () {
     
         // Función para actualizar los enlaces de navegación
 document.addEventListener('DOMContentLoaded', function () {
-    const currentChapter = 1; // Cambia este valor al número del capítulo actual
+    const currentChapter = 2; // Cambia este valor al número del capítulo actual
     const totalChapters = 179; // Total de capítulos disponibles
     
     // Establecer enlace para el capítulo anterior
-    const prevChapter = currentChapter > 1 ? `../capitulos/capitulo-${currentChapter - 1}` : '';
+    const prevChapter = currentChapter > 1 ? `/manga/capitulos/capitulo-${currentChapter - 1}` : '';
     document.getElementById('previous-chapter').href = prevChapter;
+    console.log("Capítulo Anterior URL:", prevChapter); // Muestra el URL en la consola
 
     // Establecer enlace para el siguiente capítulo
-    const nextChapter = currentChapter < totalChapters ? `../capitulos/capitulo-${currentChapter + 1}` : '';
+    const nextChapter = currentChapter < totalChapters ? `/manga/capitulos/capitulo-${currentChapter + 1}` : '';
     document.getElementById('next-chapter').href = nextChapter;
+    console.log("Capítulo Siguiente URL:", nextChapter); // Muestra el URL en la consola
 
     // Ocultar el botón de "Capítulo Anterior" si estamos en el primer capítulo
     if (currentChapter === 1) {
